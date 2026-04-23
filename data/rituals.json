@@ -1,0 +1,30 @@
+[
+  {
+    "id": "RT-001",
+    "name": "Satsa-Ritual (Evil Spirit Dispersion)",
+    "purpose": "Expelling lingering vengeful spirits from a living space",
+    "ingredients": ["Sea salt", "Dried red chili peppers", "Peach wood branch", "Red bean (Pat)"],
+    "steps": [
+        "Sprinkle sea salt around all entrances of the house.",
+        "Burn dried red chili peppers in the center of the main room to create acrid smoke.",
+        "Strike the four corners of the room with a peach wood branch while reciting the name of the household deity.",
+        "Scatter red beans outside the front door to prevent re-entry."
+    ],
+    "risk_level": "Medium",
+    "success_probability": "75%"
+  },
+  {
+    "id": "RT-002",
+    "name": "Bujeok Sealing (Talisman Application)",
+    "purpose": "Creating a spiritual barrier against invisible entities",
+    "ingredients": ["Yellow handmade paper", "Cinnabar ink (Jusa)", "Brush made of wolf hair"],
+    "steps": [
+        "Purify the mind through meditation and cold water bathing.",
+        "Write the specific script for protection using Cinnabar ink.",
+        "Burn incense and pass the paper through the smoke three times.",
+        "Affix the talisman above the door frame during the Hour of the Dragon (7-9 AM)."
+    ],
+    "risk_level": "Low",
+    "success_probability": "90%"
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "SK-001",
+    "entity_name": "Salmokji Water Ghost (살목지 수귀)",
+    "category": "Gwishin (Ghost)",
+    "region": "Iksan-si, Jeollabuk-do",
+    "danger_level": "S",
+    "trigger": "Calling out a name near the reservoir on a rainy night",
+    "weakness": {
+      "item": "Peach tree branch (Boksunga-namu)",
+      "method": "Strike the ground three times with a branch that grew toward the east."
+    },
+    "background_lore": "Drowned souls of laborers who disappeared during the construction of the reservoir in the 1970s. They pull passersby into the depths to take their places.",
+    "attributes": ["Shadowy", "Cold touch", "Voice mimicry"]
+  },
+  {
+    "id": "SK-002",
+    "entity_name": "Dokkaebi (도깨비)",
+    "category": "Nature Spirit",
+    "region": "Nationwide / Mountains",
+    "danger_level": "B",
+    "trigger": "Found near old blood-stained objects or isolated mountain paths at night",
+    "weakness": {
+      "item": "Red bean porridge (Patjuk)",
+      "method": "Sprinkle Patjuk around the perimeter or challenge to a wrestling match (Ssireum)."
+    },
+    "background_lore": "Not the soul of a dead human, but an inanimate object (like an old broom or mallet) transformed by spiritual energy. They love wrestling and trickery but can be outsmarted.",
+    "attributes": ["Supernatural strength", "Invisibility", "Wealth manipulation"]
+  },
+  {
+    "id": "SK-003",
+    "entity_name": "Cheonyeo Gwishin (처녀귀신)",
+    "category": "Gwishin (Virgin Ghost)",
+    "region": "Tradition-heavy villages / Old houses",
+    "danger_level": "A",
+    "trigger": "Feeling a sudden drop in temperature or hearing weeping in empty rooms",
+    "weakness": {
+      "item": "Male spiritual energy or Marriage ceremony",
+      "method": "Perform a 'Soul Marriage' to appease the regret of dying unmarried."
+    },
+    "background_lore": "The spirit of a young woman who died with massive regret (Han) because she could not fulfill the traditional expectation of marriage.",
+    "attributes": ["Telekinesis", "Illusion weaving", "Extreme cold aura"]
+  },
+  {
+    "id": "SK-004",
+    "entity_name": "Jangsanbum (장산범)",
+    "category": "Modern Urban Legend / Cryptid",
+    "region": "Jangsan Mountain, Busan",
+    "danger_level": "S",
+    "trigger": "Hearing a familiar voice (family or friend) calling from deep within the white fog",
+    "weakness": {
+      "item": "Iron objects and loud metallic noise",
+      "method": "Clash iron pans together and do not follow the voice, regardless of how desperate it sounds."
+    },
+    "background_lore": "A creature covered in white fur that mimics human voices perfectly to lure prey into its cave. One of the most feared modern Korean legends.",
+    "attributes": ["Perfect voice mimicry", "Extreme speed", "Heightened hearing"]
+  },
+  {
+    "id": "SK-005",
+    "entity_name": "Gumiho (구미호)",
+    "category": "Legendary Monster",
+    "region": "Remote mountains / Valleys",
+    "danger_level": "S",
+    "trigger": "A beautiful lone woman encountered in the deep forest who smells faintly of fox",
+    "weakness": {
+      "item": "Keeping a secret for 100 days",
+      "method": "A man must not reveal her identity if she is trying to become human, or use a magical tiger skin to trap her."
+    },
+    "background_lore": "A fox that has lived for 1,000 years, gaining nine tails and shape-shifting powers. It seeks to consume human livers or hearts to become truly human.",
+    "attributes": ["Shape-shifting", "Illusion", "Longevity"]
+  },
+  {
+    "id": "SK-006",
+    "entity_name": "Jeoseung Saja (저승사자)",
+    "category": "Divine Envoy",
+    "region": "Anywhere (appears to the dying)",
+    "danger_level": "N/A",
+    "trigger": "Approaching the moment of death",
+    "weakness": {
+      "item": "Offerings of food and money",
+      "method": "Providing a 'Jeban' (offering table) may delay the soul's retrieval momentarily, but death is inevitable."
+    },
+    "background_lore": "The Korean Grim Reaper. Wears a black Gat (traditional hat) and black Hanbok. Tasked by King Yeomra to guide souls to the afterlife.",
+    "attributes": ["Invisibility to the living", "Soul extraction", "Omnipresence"]
+  },
+  {
+    "id": "SK-007",
+    "entity_name": "Bulgasari (불가사리)",
+    "category": "Iron-eating Monster",
+    "region": "Metropolitan areas (Modern context) / Temples",
+    "danger_level": "A",
+    "trigger": "Presence of large amounts of iron or weapons",
+    "weakness": {
+      "item": "Fire",
+      "method": "The creature is made of iron and consumes it, but extreme heat can melt or weaken it despite its name meaning 'impossible to kill'."
+    },
+    "background_lore": "Born from a grain of rice mixed with needles by a desperate monk or grandmother. It grows by eating metal and becomes a symbol of protection against war.",
+    "attributes": ["Metal consumption", "Growth", "Invulnerability to weapons"]
+  },
+  {
+    "id": "SK-008",
+    "entity_name": "Dalgyal Gwishin (달걀귀신)",
+    "category": "Gwishin (Egg Ghost)",
+    "region": "Mountain passes / Narrow alleys",
+    "danger_level": "B",
+    "trigger": "Encountered on a lonely road at night, standing with its back turned",
+    "weakness": {
+      "item": "Ignoring and running away",
+      "method": "Do not look at its face. If you see its featureless face, you may fall ill or die from shock."
+    },
+    "background_lore": "A ghost with no facial features (no eyes, nose, or mouth). Legend says it was a person who died without any descendants to perform rituals for them.",
+    "attributes": ["Identity erasure", "Shock induction"]
+  }
+]

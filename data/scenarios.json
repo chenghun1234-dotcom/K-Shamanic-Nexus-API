@@ -1,0 +1,22 @@
+[
+  {
+    "id": "SC-001",
+    "template_name": "The Hidden Taboo",
+    "structure": "A protagonist travels to {region} and discovers a hidden village practice involving {entity}."
+  },
+  {
+    "id": "SC-002",
+    "template_name": "Reservoir Spirits",
+    "structure": "Night shifts at the {region} construction site reveal the true reason why the water level never drops below the {entity}'s mark."
+  },
+  {
+    "id": "SC-003",
+    "template_name": "The Abandoned Shrine",
+    "structure": "An urban explorer in {region} finds a sealed talisman on an old mountain path, accidentally releasing a {entity} trapped since the Joseon era."
+  },
+  {
+    "id": "SC-004",
+    "template_name": "Gannibal Rural Mystery",
+    "structure": "A police officer transferred to the remote {region} notices that the elderly residents all have the same scar from a {entity} encounter years ago."
+  }
+]
