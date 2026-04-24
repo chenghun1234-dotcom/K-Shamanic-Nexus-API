@@ -1,0 +1,525 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "K-Shamanic Nexus API",
+    "description": "A high-performance API for Korean folklore, shamanism, and occult data.",
+    "version": "1.0.0",
+    "x-logo": {
+      "url": "https://k-shamanic-nexus-api.vercel.app/static/logo.png"
+    }
+  },
+  "paths": {
+    "/entities": {
+      "get": {
+        "summary": "Get Entities",
+        "operationId": "get_entities_entities_get",
+        "parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Category"
+            }
+          },
+          {
+            "name": "danger_level",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Danger Level"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Entity"
+                  },
+                  "title": "Response Get Entities Entities Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rituals": {
+      "get": {
+        "summary": "Get Rituals",
+        "operationId": "get_rituals_rituals_get",
+        "parameters": [
+          {
+            "name": "purpose",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Purpose"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ritual"
+                  },
+                  "title": "Response Get Rituals Rituals Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/divination-logic": {
+      "get": {
+        "summary": "Get Divination Matching",
+        "operationId": "get_divination_matching_divination_logic_get",
+        "parameters": [
+          {
+            "name": "saju_element",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Saju Element"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DivinationMatch"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plot-generator": {
+      "post": {
+        "summary": "Generate Scenario",
+        "operationId": "generate_scenario_plot_generator_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScenarioRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScenarioResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "operationId": "health_check_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "Root",
+        "operationId": "root__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DivinationMatch": {
+        "properties": {
+          "saju_element": {
+            "type": "string",
+            "title": "Saju Element"
+          },
+          "compatible_entity_type": {
+            "type": "string",
+            "title": "Compatible Entity Type"
+          },
+          "taboo_actions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Taboo Actions"
+          },
+          "protective_item": {
+            "type": "string",
+            "title": "Protective Item"
+          },
+          "fortune_impact": {
+            "type": "string",
+            "title": "Fortune Impact"
+          }
+        },
+        "type": "object",
+        "required": [
+          "saju_element",
+          "compatible_entity_type",
+          "taboo_actions",
+          "protective_item",
+          "fortune_impact"
+        ],
+        "title": "DivinationMatch"
+      },
+      "Entity": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "entity_name": {
+            "type": "string",
+            "title": "Entity Name"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "region": {
+            "type": "string",
+            "title": "Region"
+          },
+          "danger_level": {
+            "type": "string",
+            "title": "Danger Level"
+          },
+          "trigger": {
+            "type": "string",
+            "title": "Trigger"
+          },
+          "weakness": {
+            "$ref": "#/components/schemas/Weakness"
+          },
+          "background_lore": {
+            "type": "string",
+            "title": "Background Lore"
+          },
+          "attributes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Attributes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "entity_name",
+          "category",
+          "region",
+          "danger_level",
+          "trigger",
+          "weakness",
+          "background_lore",
+          "attributes"
+        ],
+        "title": "Entity"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Ritual": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "purpose": {
+            "type": "string",
+            "title": "Purpose"
+          },
+          "ingredients": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Ingredients"
+          },
+          "steps": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Steps"
+          },
+          "risk_level": {
+            "type": "string",
+            "title": "Risk Level"
+          },
+          "success_probability": {
+            "type": "string",
+            "title": "Success Probability"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "purpose",
+          "ingredients",
+          "steps",
+          "risk_level",
+          "success_probability"
+        ],
+        "title": "Ritual"
+      },
+      "ScenarioRequest": {
+        "properties": {
+          "region": {
+            "type": "string",
+            "title": "Region"
+          },
+          "atmospheric_vibe": {
+            "type": "string",
+            "title": "Atmospheric Vibe",
+            "default": "Rural Horror"
+          },
+          "time_setting": {
+            "type": "string",
+            "title": "Time Setting",
+            "default": "Modern"
+          },
+          "focus_entity": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Focus Entity"
+          }
+        },
+        "type": "object",
+        "required": [
+          "region"
+        ],
+        "title": "ScenarioRequest"
+      },
+      "ScenarioResponse": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "plot_summary": {
+            "type": "string",
+            "title": "Plot Summary"
+          },
+          "key_locations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Key Locations"
+          },
+          "taboos": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Taboos"
+          },
+          "climax_event": {
+            "type": "string",
+            "title": "Climax Event"
+          },
+          "json_structured_data": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Json Structured Data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "title",
+          "plot_summary",
+          "key_locations",
+          "taboos",
+          "climax_event",
+          "json_structured_data"
+        ],
+        "title": "ScenarioResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "Weakness": {
+        "properties": {
+          "item": {
+            "type": "string",
+            "title": "Item"
+          },
+          "method": {
+            "type": "string",
+            "title": "Method"
+          }
+        },
+        "type": "object",
+        "required": [
+          "item",
+          "method"
+        ],
+        "title": "Weakness"
+      }
+    }
+  }
+}

@@ -82,6 +82,10 @@ async def generate_scenario(req: ScenarioRequest):
         json_structured_data={"vibe": req.atmospheric_vibe, "focus": entity, "template_id": template["id"]}
     )
 
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "service": "K-Shamanic Nexus API"}
+
 # Static files for documentation
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
